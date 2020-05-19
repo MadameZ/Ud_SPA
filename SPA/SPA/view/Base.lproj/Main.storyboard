@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SPA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enregistrer un animal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymI-dk-AL4">
+                                <rect key="frame" x="20" y="49" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a77-bx-thF">
+                                <rect key="frame" x="20" y="93" width="374" height="237.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2020-05-19 à 17.51.26" translatesAutoresizingMaskIntoConstraints="NO" id="1Gb-Yi-Nuu">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="237.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="pvE-al-zbX">
+                                        <rect key="frame" x="192" y="67.5" width="182" height="103"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwb-Lb-PU1" userLabel="camera">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="22"/>
+                                                <color key="tintColor" red="0.83098363880000004" green="0.69696182009999996" blue="0.4466956258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="camera.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="cameraPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M8P-wE-A5k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jew-e9-e3f" userLabel="library">
+                                                <rect key="frame" x="0.0" y="81" width="182" height="22"/>
+                                                <color key="tintColor" red="0.83098363880000004" green="0.69696182009999996" blue="0.4466956258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="photo.fill.on.rectangle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="libraryPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEm-tP-KxR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom de l'animal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-h5-VIx">
+                                <rect key="frame" x="20" y="335.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-VJ-SlZ">
+                                <rect key="frame" x="20" y="379.5" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Chien"/>
+                                    <segment title="Chat"/>
+                                    <segment title="Autre"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.83098363880000004" green="0.69696182009999996" blue="0.4466956258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="4na-Pp-r6u">
+                                <rect key="frame" x="20" y="420.5" width="374" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre dans la portée : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-Fg-xjw">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="73N-df-rqz">
+                                        <rect key="frame" x="280" y="0.0" width="94" height="20.5"/>
+                                        <connections>
+                                            <action selector="stepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="AD5-qY-IIl"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="eWZ-Ub-gEf">
+                                <rect key="frame" x="20" y="451" width="374" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sevré" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5o-BD-Z4Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNa-jf-ny6">
+                                        <rect key="frame" x="325" y="0.0" width="51" height="20.5"/>
+                                        <color key="onTintColor" red="0.83098363880000004" green="0.69696182009999996" blue="0.4466956258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="y5e-nW-vYA"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qba-Dp-RLH">
+                                <rect key="frame" x="20" y="481.5" width="374" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sociabilité: 50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8l-TQ-BGZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gr8-IT-Vay">
+                                        <rect key="frame" x="-2" y="28.5" width="378" height="21.5"/>
+                                        <color key="minimumTrackTintColor" red="0.83098363880000004" green="0.69696182009999996" blue="0.4466956258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="sliderPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="4UQ-Ej-PX4"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="79C-A4-12l">
+                                <rect key="frame" x="20" y="540.5" width="374" height="241.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de naissance :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPH-pz-8Ub">
+                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="3ie-YR-6qB">
+                                        <rect key="frame" x="0.0" y="25.5" width="320" height="216"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="fr_FR"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUB-uT-mya">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.83098363880000004" green="0.69696182009999996" blue="0.4466956258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LBV-Y9-uuN"/>
+                                </constraints>
+                                <state key="normal" title="Ajouter animal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addAnimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAg-PC-tY2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a77-bx-thF" secondAttribute="trailing" constant="20" id="4c4-UM-qUy"/>
+                            <constraint firstItem="a77-bx-thF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7XS-db-wkl"/>
+                            <constraint firstItem="ymI-dk-AL4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="9g3-d1-2cg"/>
+                            <constraint firstItem="fM9-h5-VIx" firstAttribute="top" secondItem="a77-bx-thF" secondAttribute="bottom" constant="5" id="9ph-ML-99G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CUB-uT-mya" secondAttribute="trailing" constant="20" id="A6X-d7-HtY"/>
+                            <constraint firstItem="qba-Dp-RLH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BhS-EH-03t"/>
+                            <constraint firstItem="CUB-uT-mya" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ce5-if-Y2t"/>
+                            <constraint firstItem="T0f-VJ-SlZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D96-uR-DXe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ymI-dk-AL4" secondAttribute="trailing" constant="20" id="G9H-dx-x0r"/>
+                            <constraint firstItem="T0f-VJ-SlZ" firstAttribute="top" secondItem="fM9-h5-VIx" secondAttribute="bottom" constant="10" id="GBe-Bw-9Eh"/>
+                            <constraint firstItem="CUB-uT-mya" firstAttribute="top" secondItem="79C-A4-12l" secondAttribute="bottom" constant="20" id="Hop-gD-m7r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="79C-A4-12l" secondAttribute="trailing" constant="20" id="Odp-lZ-IHx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4na-Pp-r6u" secondAttribute="trailing" constant="20" id="PKP-s8-YXc"/>
+                            <constraint firstItem="a77-bx-thF" firstAttribute="top" secondItem="ymI-dk-AL4" secondAttribute="bottom" constant="20" id="SO5-2b-ktt"/>
+                            <constraint firstItem="4na-Pp-r6u" firstAttribute="top" secondItem="T0f-VJ-SlZ" secondAttribute="bottom" constant="10" id="YSv-pt-V8t"/>
+                            <constraint firstAttribute="trailing" secondItem="qba-Dp-RLH" secondAttribute="trailing" constant="20" id="Yw2-1n-yY8"/>
+                            <constraint firstItem="79C-A4-12l" firstAttribute="top" secondItem="qba-Dp-RLH" secondAttribute="bottom" constant="10" id="Zgj-EC-59P"/>
+                            <constraint firstItem="eWZ-Ub-gEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aDL-WD-r28"/>
+                            <constraint firstItem="4na-Pp-r6u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dN7-aB-i0L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CUB-uT-mya" secondAttribute="bottom" constant="20" id="fuB-cZ-hhA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eWZ-Ub-gEf" secondAttribute="trailing" constant="20" id="iZU-0e-XcE"/>
+                            <constraint firstItem="qba-Dp-RLH" firstAttribute="top" secondItem="eWZ-Ub-gEf" secondAttribute="bottom" constant="10" id="kpo-zm-uKe"/>
+                            <constraint firstItem="ymI-dk-AL4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lCo-gS-AUQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T0f-VJ-SlZ" secondAttribute="trailing" constant="20" id="qir-zk-eGw"/>
+                            <constraint firstItem="fM9-h5-VIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sKB-6h-vL3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fM9-h5-VIx" secondAttribute="trailing" constant="20" id="ujJ-Qd-t5v"/>
+                            <constraint firstItem="79C-A4-12l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xgH-9E-WfI"/>
+                            <constraint firstItem="eWZ-Ub-gEf" firstAttribute="top" secondItem="4na-Pp-r6u" secondAttribute="bottom" constant="10" id="ya6-to-jnR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="CUB-uT-mya" id="Oal-v5-rzt"/>
+                        <outlet property="animalSegmentedControl" destination="T0f-VJ-SlZ" id="ijZ-wm-T7D"/>
+                        <outlet property="detePicker" destination="3ie-YR-6qB" id="08R-lc-GfD"/>
+                        <outlet property="imageHolder" destination="1Gb-Yi-Nuu" id="VeB-Rl-F60"/>
+                        <outlet property="mySlider" destination="gr8-IT-Vay" id="bvz-TQ-uje"/>
+                        <outlet property="myStepper" destination="73N-df-rqz" id="w4n-ZE-As5"/>
+                        <outlet property="mySwitch" destination="DNa-jf-ny6" id="iAz-cP-y5F"/>
+                        <outlet property="nameTextField" destination="fM9-h5-VIx" id="apD-0Z-cIh"/>
+                        <outlet property="sliderLabel" destination="U8l-TQ-BGZ" id="dOY-Il-tMf"/>
+                        <outlet property="stepperLabel" destination="GWH-Fg-xjw" id="hNl-Vi-rAZ"/>
+                        <outlet property="switchLabel" destination="Q5o-BD-Z4Q" id="Sym-13-6uk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="104.46428571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Capture d’écran 2020-05-19 à 17.51.26" width="778" height="936"/>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
