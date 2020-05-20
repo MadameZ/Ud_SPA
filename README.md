@@ -9,7 +9,9 @@ To create an animal's card we use in this app :
 - slider
 - datePicker
 - segue : prepare and perform
+- navigationController
 
-<img width="324" alt="Capture d’écran 2020-05-20 à 15 11 12" src="https://user-images.githubusercontent.com/39524369/82449907-3e63c600-9aac-11ea-9ba4-23b809479f87.png">
+<img width="337" alt="Capture d’écran 2020-05-20 à 15 47 37" src="https://user-images.githubusercontent.com/39524369/82454260-d2845c00-9ab1-11ea-8e72-a5d77e7c56c6.png">
 
-<img width="327" alt="Capture d’écran 2020-05-20 à 15 11 28" src="https://user-images.githubusercontent.com/39524369/82449914-402d8980-9aac-11ea-9410-7e1012d15daf.png">
+<img width="336" alt="Capture d’écran 2020-05-20 à 15 47 29" src="https://user-images.githubusercontent.com/39524369/82454270-d6b07980-9ab1-11ea-88b4-741e09f3df53.png">
+
