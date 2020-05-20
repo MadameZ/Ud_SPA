@@ -14,6 +14,7 @@
 		BD3694A42472A21B008237BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3694A22472A21B008237BF /* LaunchScreen.storyboard */; };
 		BD3694AC2472B02A008237BF /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3694AB2472B02A008237BF /* Animal.swift */; };
 		BD3694B22472DCE0008237BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3694B12472DCE0008237BF /* ViewController.swift */; };
+		BD6890422475270300E98EAE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6890412475270300E98EAE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BD3694A52472A21B008237BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD3694AB2472B02A008237BF /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		BD3694B12472DCE0008237BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD6890412475270300E98EAE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3694B12472DCE0008237BF /* ViewController.swift */,
+				BD6890412475270300E98EAE /* DetailViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				BD3694AC2472B02A008237BF /* Animal.swift in Sources */,
 				BD3694982472A217008237BF /* AppDelegate.swift in Sources */,
+				BD6890422475270300E98EAE /* DetailViewController.swift in Sources */,
 				BD36949A2472A217008237BF /* SceneDelegate.swift in Sources */,
 				BD3694B22472DCE0008237BF /* ViewController.swift in Sources */,
 			);

@@ -15,6 +15,7 @@ struct Animal {
     var sevre: Bool
     var sociabilite: Int
     var date: String
+    var type: AnimalType
     
 }
 

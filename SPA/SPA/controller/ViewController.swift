@@ -39,6 +39,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     
+    let segueID = "segueDetail"
+    
     var imagePicker = UIImagePickerController()
     
     var datePicker = UIDatePicker()
@@ -48,12 +50,13 @@ class ViewController: UIViewController {
         imagePicker.delegate = self
         nameTextField.delegate = self
         addButton.layer.cornerRadius = 15
-//        imageHolder.layer.cornerRadius = 5
-        
+       
         updateStepper()
         updateSwitch()
         updateSlider()
     }
+    
+  
     
    
     
@@ -119,11 +122,30 @@ class ViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.timeStyle = .none
         formatter.dateStyle = .medium
+        formatter.locale = Locale(identifier: "fr_FR")
+        
         return formatter.string(from: datePicker.date)
     }
     
 
 // MARK: - add animal
+    
+    func getType() -> AnimalType {
+        switch animalSegmentedControl.selectedSegmentIndex {
+        case 0: return .chien
+        case 1: return .chat
+        default: return .autre
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if segue.identifier == segueID {
+              if let destination = segue.destination as? DetailViewController {
+                  destination.animal = sender as? Animal
+              }
+          }
+      }
+    
     @IBAction func addAnimal(_ sender: Any) {
         guard let name = nameTextField.text, name != "" else { return }
         let animal = Animal(
@@ -132,13 +154,15 @@ class ViewController: UIViewController {
             portee: Int(myStepper.value),
             sevre: mySwitch.isOn,
             sociabilite: Int(mySlider.value),
-            date: getDate())
-        print("Nouvel animal: " + animal.name)
-        print(animal.portee)
-        print(animal.sevre)
-        print(animal.sociabilite)
-        print(animal.date)
+            date: getDate(),
+            type: getType())
+        
+        print(getDate())
+        performSegue(withIdentifier: segueID, sender: animal)
     }
+   
+  
+    
     
     
 }
